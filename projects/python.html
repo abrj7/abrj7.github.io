@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abdullah.R</title>
+    <header>
+        <nav>
+            <a href="../projects.html" class="active-page">projects</a>
+        </nav>
+    </header>
+    <style>
+
+        body{
+            color:#fff;
+            background: #000000;
+            margin:1em auto;
+            padding:1em;
+            max-width:50em;
+            font:14px monospace;}
+
+        footer{
+            clear:both;
+            margin-top:2em;}
+
+        a{
+            color: #67eaf9;
+            text-decoration:none;}
+
+        a:hover, .active-page{
+            color: #E1C78F;}
+
+
+        nav{font-size:17px;}
+        code,dt{color:#6c6;}
+        #list th,tr:nth-child(even){
+            background:#222a31;}
+
+        img{display:table-cell;margin:auto;max-width:300px;}
+        @media(min-width:50em){img{float:right;padding:0 20px;}}
+
+    </style>
+
+</head>
+    <body data-new-gr-c-s-check-loaded="14.1190.0" data-gr-ext-installed="">
+
+
+    <h1>python projects</h1>
+
+        <div style="display:table; padding-top: 5%;">
+            <img src="images/python/object.png" alt="my face">
+             <h2>mask detection with cnns</h2>
+            <p>i made this project during prime covid.</p>
+            <p>coded using <a href="https://keras.io/api/applications/mobilenet/">mobilenet's</a> cnn (convolutional neural network model), and trained it on the classic <a href="https://www.image-net.org/">imagenet dataset</a>. this project was done using <a href="https://www.tensorflow.org/guide/keras">tensorflow's keras api</a>, and <a href="https://github.com/opencv/opencv/tree/master/data/haarcascades">haarcascade</a> to detect whether a person was wearing a mask or not.</p>
+
+                <p> <a href="https://github.com/abrj7/Mask-Detection-AI-using-CNNs-and-Object-Detection">github repo</a></p>
+          </div>
+        <div style="display:table; padding-top: 5%;">
+            <img src="images/python/detect.jpeg" alt="my face">
+             <h2>object detection app with flask</h2>
+            <p>i used flask to integrate object detection in an app</p>
+            <p>coded using <a href="https://github.com/ultralytics/ultralytics">YOLOv8</a>, a pytorch model that allows users to integrate object detection in only a few lines. integrated with <a href="https://flask.palletsprojects.com/en/3.0.x/">flask</a>, allowing local webpage itnegration.</p>
+
+                <p> <a href="https://github.com/abrj7/object_detection_flask">github repo</a></p>
+          </div>
+
+
+</body>
+</html>

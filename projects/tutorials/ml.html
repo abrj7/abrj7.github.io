@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>abdullah</title>
+<style>
+    body{
+        color:#fff;
+        background: #000000;
+        margin:1em auto;
+        padding:1em;
+        max-width:50em;
+        font:14px monospace;}
+
+    footer{
+        clear:both;
+        margin-top:2em;}
+
+    a{
+        color: #67eaf9;
+        text-decoration:none;}
+
+    a:hover, .active-page{
+        color: #E1C78F;}
+
+
+    nav{font-size:17px;}
+    code,dt{color:#67eaf9;}
+    #list th,tr:nth-child(even){
+        background:#222a31;}
+    img{
+        max-width: 50%;
+    }
+    .centeralign{
+        text-align: center;
+    }
+</style>
+  </head>
+
+    <header>
+        <nav>
+            <a href="../tutorials.html" class="active-page">tutorials</a>
+        </nav>
+    </header>
+    
+  <body>
+    <h1 class="title">Basics of Machine Learning Tutorial</h1>
+      <hr>
+      <p class="firstp">Welcome to the complete Machine Learning Guide. Here you will learn everything about machine learning. You will be                 taught how to deal with different type of data. This course is more than enough for you to master Machine Learning's         theoretical concepts.</p>
+      <hr>
+      <h2>Table of Contents:</h2>
+      <ul>
+          <li>
+              <a href="#WhatIsMachineLearning"">
+                  What is Machine Learning
+              </a>
+          </li>
+
+          <li>
+              <a href="#WhatExactlyIsMachineLearning">What <em>exactly</em> is Machine Learning?(Part 2)</a>
+          </li>
+
+          <li>
+              <a href="#MachineLearningPlayground1">Machine Learning Playground 1.</a>
+          </li>
+
+          <li>
+              <a href="#MachineLearningPlayground2">Machine Learning Playground 2.</a>
+          </li>
+
+          <li>
+              <a href="#TypesOfMachineLearning">Types of Machine Learning.</a>
+              <ul>
+                  <li>
+                      <a href="#SupervisedLearning">Supervised Learning.</a>
+                  </li>
+                  <ul>
+                      <li>Classification</li>
+                      <li>Regression</li>
+                  </ul>
+                  <li>
+                      <a href="#TransferLearning">Transfer Learning</a>
+                  </li>
+                  <li>
+                      <a href="#ReinforcementLearning">Reinforcement Learning</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#MachineLearningFramework">Machine Learning Framework(Creating our own)</a>
+          </li>
+          <li>
+              <a href="#ModelingInMachineLearning">A deeper look into Modelling.</a>
+              <ul>
+                  <li>
+                      Part 1: Splitting Data
+                  </li>
+                  <li>
+                      Part 2: Choosing Data
+                  </li>
+                  <li>Part 3: Tuning a model</li>
+              </ul>
+          </li>
+          <li>
+             <a href="#Tools">Tools</a> 
+          </li>
+      </ul>
+
+      <hr>
+
+      <div id="WhatIsMachineLearning">
+          <h2>What is Machine Learning?</h2>
+          <p>
+              Computers are machines, and machines are <em>really</em> fast in doing some things, that humans are not so fast in. But the computer requires programming from the humans to <em>actually</em> perform a task. Now humans can't work all the time, so we use machine learning, we program the computer in a way that it can find solutions to problems, and provide it to us, without ever breaking a sweat.
+          </p>
+          <p>
+              For example, if we need to find a route, that takes the least amount of time to reach a place, we ourselves, can take a map, and use a ruler to measure the smallest distance. But this will take us hours, maybe longer. Whereas if we program the computer to use <code>if</code>, <code>else</code> blocks to find the shortest distance, it will take barely a few seconds. This can be done by simple coding.
+          </p>
+          <p>
+              Here is the real question? What if we want to find out if a customer is angry, or happy with a product, using the reviews? We can't just use <code>if</code> and <code>else</code> to that because each customer has his own language. Here is when Machine Learning comes in.
+          </p>
+      </div>
+      <hr>
+
+    <div id="WhatExactlyIsMachineLearning">
+          <h2>What <em>exactly</em> is Machine Learning?(Part 2)</h2>
+        <p>
+            You may have heard of <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">AI</a>, <a href="https://en.wikipedia.org/wiki/Data_science">Data Science</a>, <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">Neural Networks</a>, Deep Learning, but what are those things, and how does Machine Learning apply to them? There is a diagram that can help us identify the concepts behind all of these things.
+        </p>
+
+        <p>
+            It all starts with AI, a machine that acts like a human. Currently, we only have Narrow AI, AI that is only smart at one thing, like chess, or detecting heart diseases from pictures. Whereas General AI, is one that is smart in everything. We are far from reaching that stage. Machine Learning is a subset of AI, an approach to try and achieve AI, thorugh systems that can find patterns in Data. Deep Learning, is one of the techniques of implementing Machine Learning. Data Science, on the other hand, overlaps Machine Learning, which is analyzing data. When we talk about Machine Learning, we generally also talk about Data Science. Here is the chart to keep in mind:
+        </p>
+
+        <div class="centeralign"><img src="images_ml/dg1.png" alt="Diagram Of Machine Learning"></div>
+      </div>
+
+      <hr>
+
+      <div id="MachineLearningPlayground1">
+        <h2>Machine Learning Playground 1</h2>
+          <p>We can visualize Machine Learning using an amazing playground made by Google, called <a href="https://teachablemachine.withgoogle.com/">Teachable Machine</a>. It helps you play with Machine Learning projects. Hit Get Started and play around with a few projects to see how the models are trained. The rained models can differentiate between things like, humans and dogs.</p>
+      </div>
+
+      <hr>
+
+      <div id="MachineLearningPlayground2">
+          <h2>Machine Learning Playground 2.</h2>
+          <p>
+              Another amazing playground is "Machine Learning Playground", which can be trained to show recommended areas of different types. Here is the graph screen you will be welcomed with. You will be welcomed with a graph screen.
+Let's say, the y-axis represents the length of the video and the x-axis represents the likes of the video. The yellow dots will represent the likes a specific user gives to videos, and the purple represents the dislikes. We can plot the user's data, and get a trained model:
+          </p>
+          <div class="centeralign"><img src="images_ml/dg2.png" alt="Given Values"></div>
+          <p>Using this, we can train the model and get a portion of the graph, using we which we can recommend user videos that they will like.</p>
+          <div class="centeralign"><img src="images_ml/dg3.png" alt="Trained model."></div>
+
+      </div>
+
+      <hr>
+
+      <div id="TypesOfMachineLearning">
+          <h2>Types of Machine Learning.</h2>
+          <p>
+              No matter how many subcategories of machine learning, all of them are meant to predict results, based on incoming data. There are few main types of Machine Learning: Supervised, Unsupervised, Transfer Learning and Reinforcement.
+          </p>
+          <div class="centeralign"><img src="images_ml/dg4.png" alt=""></div>
+      </div>
+    <hr>
+      <div id="SupervisedLearning">
+          <h2>Supervised Learning</h2>
+          <p>
+              Firstly, we have Supervised Learning, a subset of Machine Learning. In Supervised Learning, the data already has categories, like CSV files, or data that is labeled. A supervised learning model, uses classification, or regression to differentiate data, by simply drawing a line. It can be used to predict stock prices, or hiring employees, based on experience, age, etc.
+
+          </p>
+          <div class="centeralign"><img src="images_ml/dg5.png" alt="Table"></div>
+          <br>
+          <div class="centeralign"><img src="images_ml/dg6.png" alt="ClassificationVSRegression"></div>
+          <hr>
+          <h2>Unsupervised Learning</h2>
+          <p>
+              Unsupervised learning uses an algorithm that learns to form patterns in untagged data. Using ML(Machine Learning), the computer can find patterns in a set of data, and form groups, more like what was shown in the ML Playground of video recommendations. We can either make the machine use classification or Association, in which it learns what is what.
+          </p>
+      </div>
+
+      <hr>
+
+      <div id="TransferLearning">
+          <h2>Transfer Learning</h2>
+          <p>
+              Transfer Learning leverages what one machine learning model has learned, into another model. You can create a model that uses lots of images and knows what the images are, for examples trees or cars. That way, the same model can be used to recognize pictures, but the pictures are of cats vs lions. The concept is same, but the images are different, much like the ML model of google.
+          </p>
+          <div class="centeralign"><img src="images_ml/dg7.png" alt="Transfer Learning"></div>
+      </div>
+
+      <hr>
+
+    <div id="ReinforcementLearning">
+          <h2>Reinforcement Learning</h2>
+        <p>
+            Reinforcement Learning teaches the machine using trial and error; reward and punishment. So the program can simply learn to play a game, by playing it over a million times. More or less like how humans learn. If it does something wrong, the machine will be like "Oh, I will not do that next time, maybe try doing the opposite.".
+        </p>
+        <div class="centeralign"><img src="images_ml/dg8.png" alt="Reinforcement Learning"></div>
+      </div>
+
+      <hr>
+
+      <div id="MachineLearningFramework">
+          <h2>Machine Learning Framework(Creating our own)</h2>
+          <p>
+              Using Python, we will now build our own Machine Learning Framework.
+          </p>
+
+          <p>
+Machine Learning usually comes in three parts, Data Collection, Data modeling (aka, writing an algorithm to find patterns), and Deployment. Right now, we will work on Data modeling, by first creating a framework, and matching it to other data science projects.
+          </p>
+
+          <h2>
+              Data Modelling
+          </h2>
+
+          <p>
+              There are 6 steps to follow while modelling Data:
+          </p>
+
+          <div class="centeralign"><img src="images_ml/dg9.png" alt=""></div>
+          <br>
+          <p>Visual Representation:</p>
+          <div class="centeralign"><img src="images_ml/dg10.png" alt=""></div>
+      </div>
+
+      <hr>
+
+      <div id="ModelingInMachineLearning">
+          <h2>Modeling In Machine Learning</h2>
+
+          <p>
+              Modelling in Machine Learning is on of the most important concepts. Lets dig deeper into it. There are a few very important parts in Machine Learning:
+
+          </p>
+          <hr class="hr2">
+          <div id="SplittingData:"> 
+              <h2>Part 1: Splitting Data:</h2>
+              <p>
+                  In this part, we first ask the question, "Based on our problem and data, what model should we use?". Modelling can be broken down into three parts, Choosing and training a model, Tuning a model, Model comparison. This is the most important part in Machine Learning. To achieve this, we split the data into three diffferent sets, one for training, one for validation, and one for testing.
+              </p>
+
+              <div class="centeralign"><img src="images_ml/dg11.png" alt=""></div>
+
+              <p>
+                  Think of training, as practicing course material for your exams. As your exams come nearer, you take a practice paper to test yourself, this can be said as validation. Lastly, as you are giving the exam itself, and even though you are faced with different, never-seen-before questions, you know how to tackle them because of the experience you got from practice. This is the same way ML Models work. But in ML it is called Generalization.
+              </p>
+
+              <p>
+                  Generalization: <em>The ability for a machine learning model to perform well on data it hasn't seen before.</em> 
+              </p>
+
+              <p>
+                  But what if we as students have already seen the exam paper? Easy, we will get top marks right? But did we learn anything? No. And that is where the training, validation, test splits come in, while dealing with Machine Learning. We split our data into sets and work with them, by first training them, test it on a sample, and taking it out in the real world and use it on other data.
+              </p>
+          </div>
+
+          <hr class="hr2">
+
+          <div id="ChoosingData:">
+              <h2>
+                  Part 2: Choosing Data:
+              </h2>
+              <p>
+                  Now, that we have talked about splitting data, lets dig even deeper and alk about the first step, "Choosing the data and training it".
+              </p>
+
+              <p>
+                  For Structured Data:
+              </p>
+
+              <p>
+                  There are many ML models that are already made, so rather than creating an algorithm, we can simply use other already-developed ML models and use them. So our first goal is to choose which model works best with our data. When working with Structured Data, it is best to use Decision Tree models, like <a href="https://en.wikipedia.org/wiki/Random_forest">"Random Forests"</a> , or <a href="https://en.wikipedia.org/wiki/Gradient_boosting">"Gradient Boosting Algorithms"</a>; like <a href="https://catboost.ai/">CatBoost</a>, <a href="https://xgboost.readthedocs.io/en/latest/build.html">XGBoost</a>.
+              </p>
+
+              <p>
+                  For Unstructured Data:
+              </p>
+
+              <p>
+                  Unstructured data is best dealt with using Deep Learning, and Transfer Learning, because there may not be an already created model for the type of output you need based on your data.</p>
+
+
+            <p>
+After choosing the model, we need to train our model. The goal here is to line up the inputs and outputs. We make our model to look at the inputs/features of the data, to make predictions about it, which is the output. Training the model should always be done on the training set that is divided from the main data.
+Another main goal while training your data, is minimizing the time taken between your experiments. This means, training samll amounts of data first, and then moving to larger data sets. For example, if you have 100,000 examples in your data set, you might start training with only 10,000.
+              </p>
+
+              <hr class="hr2">
+
+              <h2>
+                  Part 3: Tuning a model:
+              </h2>
+
+              <p>
+                  Tuning normally takes place in your validation data split, but depending on your circumstances, it could also take place on your training split. Tuning in a model can be explained using a real-life example. Lets say you have to cook a meal in the oven without ever trying it before. First, you t ry cooking it with 180°C, but it utrns out raw, next you try it with 200 °C and it is still a little uncooked. But lastly, you try with 250°C, and the meal is cooked perfectly. But in a model, you can use tuning to change numbers, layers etc. (Will be looked later on)
+
+
+              </p>
+
+              <hr class="hr2">
+
+              <h2>
+                  Part 4: Model comparison:
+              </h2>
+
+              <p>
+                  Comparing models takes place on the test set. This is used to see how your model generalizes with the types of problems it faces. A good model will give out similar results in all three sets. In model comparison, there are two types of results, "Overfitting", and "Underfitting". Underfitting means that your model gives a higher success rate in the training model rather than the test model. And overfitting is the opposite; higher results in the test, than the training data.
+
+              </p>
+              <div class="centeralign"><img src="images_ml/dg12.png" alt=""></div>
+
+              <p>
+                  The best type of result is the one that fits just right, or in other words, a result that is balanced. Overfitting is not good because it literally is the same as you giving an exam after seeing the paper, which means you will be able to answer only the specific exam rightly, no other types of problems. One of the main reasons for overfitting is data leakage from the test data set to the training set.
+              </p>
+
+          </div>
+      </div>
+<hr>
+      <div id="Tools">
+          <h2>What tools are used for what steps</h2>
+
+          <p>
+              For steps like Data, Evaluation, and Features, we might use frameworks like <a href="https://pandas.pydata.org/">Pandas</a> ,<a href="https://matplotlib.org/">Matplotlib</a> , and <a href="https://numpy.org/">NumPy</a>.
+          </p>
+
+          <p>
+              Whereas for Modelling, the most common frameworks are <a href="https://www.tensorflow.org/">TensorFlow</a> , <a href="https://pytorch.org/">PyTorch</a>, <a href="https://scikit-learn.org/stable/">SciKit-Learn</a>, and the previously discussed, XGBoost, and CatBoost. For the entire project, we can use <a href="https://jupyter.org/">Jupyter</a> and Anaconda.
+          </p>
+      </div>
+<hr>
+      <h2>anaconda</h2>
+      <p><a href="https://www.anaconda.com/">Anaconda</a> is a software distribution that provides us with literally all types of Machine Learning frameworks we can use to build our projects. To do that we will need to install Anaconda, which takes around 3GB memory space in your computer. But because we won't need all the frameworks, we can use a smaller version on Anaconda, which contains all the necessary tools we need to get started with ML. The smaller version is called MiniConda. Think of Anaconda as a Hardware Store, and MiniConda as a work bench. But to actually get that packages, we will use Conda itself. You can think of Conda as our assistant aka the Package Manager. In python, the package manager is pip, and in MiniConda it is Conda.</p>
+
+        <h2>conda</h2>
+          <p>A workflow for a ML project, might involve creating a project folder, containg our data and the tools we are using. We normally have to use a collection of tools, like pandas, jupyter, etc.. Thus, this collection is called an Environment, which we make using Conda. This is handy for large projects, in which many people are working, and Conda makes it easy to fork the tools.</p>
+
+      <h2>miniconda setup</h2>
+      <p>Head over to <a href="https://docs.anaconda.com/miniconda/">MiniConda Docs</a> and install MiniConda on your OS.</p>
+      
+      <p>After downloading it, head over to you Anaconda Terminal by searching it up, and move to the Desktop directory on Windows by using the command: <code>chdir Desktop</code>. Over there, run this command to create a new project folder: <code>mkdir <name of your project folder. can be anything></code>. After that, you need to let conda install a few packages. To do that, just run this command: <code>conda create --prefic ./env pandas matplotlib numpy scikit-learn</code> and hit enter. After that, hit y again and you will see a few packages getting installed. Following the package installation, you will recieve a command that you can run to activate your environment. <code>conda activate C:\Users\<user>\Desktop\<file_name>\env</code></p>
+      
+
+     <p> To install Jupyter Notebook, where we will write all our code, run the conda command: <code>conda install jupyter</code>, and launch jupyter by the command: <code>jupyter notebook</code>. This will take you to the default browser opened with the jupyter notebook. Create a new Python file and we will be ready to start writing some code.</p>
+
+<hr>
+      <h2>testing</h2>
+      <p>To test if all the frameworks are installed, import all of them and run the code:</p>
+      <code>
+          import pandas as pd<br>
+          import matplotlib.pyplot as plt<br>
+          import numpy as np<br>
+          import sklearn<br>
+      </code>
+      <p>If no errors pop up, you are good to go.</p>
+
+      <h2>finishing up</h2>
+      <p>To close Jupyter, go to command prompt and hit <code>Ctrl+C</code>, this will close Jupyter. After that if you want to deactivate your environment, run the <code>conda deactivate</code> command.</p>
+      
+
+      <h5>All work done by Abdullah Rajput. &copy; 2022</h5>
+
+    <script src="script.js"></script>
+  </body>
+</html>

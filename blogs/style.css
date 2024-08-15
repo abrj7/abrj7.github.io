@@ -1,0 +1,52 @@
+/* @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin&display=swap'); */
+body {
+    color: #fff;
+    background: #000000;
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 50em;
+    font: 14px monospace;
+    display: flex;
+    min-height: 100vh;
+      flex-direction: column;
+    flex: 1;
+}
+
+footer {
+    clear: both;
+    margin-top: 5em;
+}
+a {
+    color: #67eaf9;
+    text-decoration: none;
+}
+
+.icons:hover{
+    color: #F2F7A1;
+}
+
+
+i:hover, a:hover, .active-page {
+    color: #E1C78F;
+}
+
+nav {
+    font-size: 17px;
+}
+
+img {
+  /* display: table-cell; */
+  margin: auto;
+  max-width: 250px;
+}
+
+@media(min-width: 50em) {
+  img {
+    float: right;
+    padding: 0 20px;
+      /* padding-top: 10%; */
+  }
+}
+
+
+
